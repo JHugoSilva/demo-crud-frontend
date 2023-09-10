@@ -4,6 +4,7 @@
             <li class="product-item" v-for="product in products" :key="product.id">
                 <span class="product-name">{{ product.name }}</span>
                 <div class="action-links">
+                    <router-link class="edit-link" :to="{name:'EditProduct', params: {id:product.id}}">Edit</router-link>
                     <button class="delete-button" @click="deleteProduct(product.id)">Delete</button>
                 </div>
             </li>

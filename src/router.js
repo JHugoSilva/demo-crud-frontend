@@ -4,6 +4,7 @@ import Login from './components/Login.vue'
 import Register from './components/Register.vue'
 import AddProduct from './components/AddProduct.vue'
 import ProductList from './components/ProductList.vue'
+import EditProduct from './components/EditProduct.vue'
 
 
 const routes = [
@@ -29,6 +30,13 @@ const routes = [
         path: '/',
         name: 'ProductList',
         component: ProductList,
+        meta: {public: false}
+    },
+    {
+        path: '/edit-product/:id',
+        name: 'EditProduct',
+        props: true,
+        component: EditProduct,
         meta: {public: false}
     }
 ]
